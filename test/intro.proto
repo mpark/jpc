@@ -1,0 +1,54 @@
+package intro;
+
+message BarInfo {
+  required bool x = 1;
+  optional int64 y = 2;
+  optional string z = 3;
+}
+
+message FooInfo {
+  required bool a = 1;
+  required int32 b = 2;
+  required int64 c = 3;
+  required uint32 d = 4;
+  required uint64 e = 6;
+  required double f = 7;
+  required float g = 8;
+  enum H { X = 1; Y = 0; }
+  required H h = 5;
+  required string i = 9;
+  repeated int32 j = 10;
+  repeated string k = 11;
+  optional int32 l = 12;
+  optional int32 m = 13;
+  optional int64 n = 14;
+  optional int32 o = 15;
+  optional int32 p = 16;
+  optional BarInfo bar = 17;
+};
+
+/*
+message PersonInfo {
+  required string name = 1;
+  required int32 id = 2;
+  optional string email = 3;
+}
+
+message ResourceInfo {
+  enum Type {
+    SCALAR = 0;
+    TEXT = 1;
+  }
+  required string name = 1;
+  required Type type = 2;
+  optional int64 scalar = 3;
+  optional string text = 4;
+}
+
+message FrameworkInfo {
+  optional int64 id = 1;
+  required string name = 2;
+  optional bool checkpoint = 3 [default = false];
+  repeated ResourceInfo resources = 4;
+}
+*/
